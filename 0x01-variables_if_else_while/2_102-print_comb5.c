@@ -7,7 +7,7 @@
  *              only the putchar function
  *              this version is more easy to read and understand.
  *
- * Return: its returns 0 (success).
+ * Return: it returns 0 (success).
  */
 
 int main(void)
