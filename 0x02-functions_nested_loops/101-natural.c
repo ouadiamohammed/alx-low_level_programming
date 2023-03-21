@@ -19,4 +19,5 @@ int	main(void)
 			sum = sum + i;
 		i++;
 	}
+	return (0);
 }
