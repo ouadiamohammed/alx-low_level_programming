@@ -3,7 +3,7 @@
 /**
  * times_table - read description.
  *
- * Description: this function that prints the 9 times table,
+ * Description: this function prints the 9 times table,
  *              starting with 0.
  *
  * Return: nothing will be returned (void).
