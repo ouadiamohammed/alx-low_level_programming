@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - read description
+ * _isalpha - read description
  *
  * @c: is the giving character.
  *
@@ -11,7 +11,7 @@
  *         0 if it's not.
  */
 
-int	_islower(int    c)
+int	_isalpha(int    c)
 {
 	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
 		return (1);
