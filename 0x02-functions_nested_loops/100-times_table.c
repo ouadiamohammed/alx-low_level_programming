@@ -1,20 +1,13 @@
 #include "main.h"
-
 /**
  * print_times_table - read description.
- *
  * @n: integer for wich the times table will printed
- *
  * Description: prints the n times table.
- *
  * Return: nothing (void).
  */
-
 void	print_times_table(int n)
 {
-	int i;
-	int j;
-	int	product;
+	int i, j, product;
 
 	if (n >= 0 && n <= 15)
 	{
