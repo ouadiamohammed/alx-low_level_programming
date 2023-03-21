@@ -5,7 +5,7 @@
  *
  * Description: this program prints "_putchar" to stdout.
  *
- * Returns: always 0.
+ * Return: always 0.
  */
 int	main(void)
 {
