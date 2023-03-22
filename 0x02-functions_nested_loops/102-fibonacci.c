@@ -10,8 +10,9 @@
 int	main(void)
 {
 	int	i = 0;
-	long int sum;
-	long int a, b;
+	long int sum = 0;
+	long int a = 0;
+	long int b = 1;
 
 	while (i < 49)
 	{
