@@ -11,7 +11,7 @@
 
 int	main(void)
 {
-	int a = 1,
+	int a = 1;
 	int b = 2;
 	int sum = 0;
 	int i = 0;
@@ -26,6 +26,6 @@ int	main(void)
 		a = b;
 		b = sum;
 	}
-	printf("\n);
+	printf("\n");
 	return (0);
 }
