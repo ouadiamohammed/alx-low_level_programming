@@ -10,7 +10,7 @@ void	print_numbers(void)
 {
 	char	c = '0';
 
-	if (c <= '9')
+	while (c <= '9')
 	{
 		_putchar(c);
 		c++;
