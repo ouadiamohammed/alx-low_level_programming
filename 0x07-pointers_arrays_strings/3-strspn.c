@@ -9,7 +9,7 @@
  * Return: the number of bytes.
  */
 
-unsigned int _strspn(char *s, char *accept)
+unsigned int	_strspn(char *s, char *accept)
 {
 	int i = 0;
 	int j = 0;
@@ -23,7 +23,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[i] == accept[k])
 			{
 				j++;
-				brek;
+				break;
 			}
 			k++;
 		}
