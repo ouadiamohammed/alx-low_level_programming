@@ -14,7 +14,7 @@ int	_strlen(char *str)
 {
 	int i = 0;
 
-	while(*str != '\0')
+	while (*str != '\0')
 	{
 		i++;
 		str++;
@@ -23,7 +23,7 @@ int	_strlen(char *str)
 }
 
 /**
- * arggstostr - concatenates all giving arguments.
+ * argstostr - concatenates all giving arguments.
  *
  * @ac: arguments counter.
  * @av: pointer to the arguments.
