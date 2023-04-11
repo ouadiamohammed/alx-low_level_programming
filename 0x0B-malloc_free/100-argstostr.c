@@ -68,7 +68,7 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		_strncpy(str + pos, av[i], strlen(av[i]));
+		_strncpy(str + pos, av[i], _strlen(av[i]));
 		pos += strlen(av[i]);
 		str[pos++] = '\n';
 	}
