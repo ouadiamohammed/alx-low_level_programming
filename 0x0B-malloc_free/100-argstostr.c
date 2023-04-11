@@ -1,77 +1,61 @@
 #include <stdlib.h>
+#include "main.h"
 #include <stdio.h>
 
 /**
- * _strlen - calculate the lenght of a string.
- * @str: pointer to giving string.
- * Return: length of string.
+ * _strlen - get the lenght of a giving string.
+ *
+ * @str: pointer to string.
+ *
+ * Return: the length of the giving string.
  */
 
 int	_strlen(char *str)
 {
 	int i = 0;
 
-	while (str[i] != '\0')
+	while(*str != '\0')
+	{
 		i++;
+		str++;
+	}
 	return (i);
 }
 
 /**
- * _strncpy - copies a string.
+ * arggstostr - concatenates all giving arguments.
  *
- * @dest: destination string.
- * @src: source string.
- * @n: number of characters should be copied.
+ * @ac: arguments counter.
+ * @av: pointer to the arguments.
  *
- * Return: destination string.
- */
-
-char	*_strncpy(char *dest, char *src, int n)
-{
-	int i = 0;
-
-	while (src[i] != '\0' && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	for (; n > i; i++)
-		dest[i] = '\0';
-	return (dest);
-}
-
-/**
- * argstostr - concatenates all the arguments of the program.
- *
- * @ac: counter of arguments.
- * @av: pointer to an array of strings.
- *
- * Return: NULL if ac = 0, av == NULL or if fails.
- *         pointer to the new string.
+ * Return: pointer to array.
  */
 
 char *argstostr(int ac, char **av)
 {
+	int i, j, k = 0;
+	int len = 0;
 	char *str;
-	int i, len = 0, pos = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-
 	for (i = 0; i < ac; i++)
-		len += _strlen(av[i] + 1);
+		len += _strlen(av[i]);
 
+	len = len + (ac + 1);
 	str = malloc(sizeof(char) * len);
 
 	if (str == NULL)
+	{
+		free(str);
 		return (NULL);
+	}
 
 	for (i = 0; i < ac; i++)
 	{
-		_strncpy(str + pos, av[i], _strlen(av[i]));
-		pos += _strlen(av[i]);
-		str[pos++] = '\n';
+		for (j = 0; j < _strlen(av[i]); j++)
+			str[k++] = av[i][j];
+		str[k++] = '\n';
 	}
-	str[pos] = '\0';
 	return (str);
 }
