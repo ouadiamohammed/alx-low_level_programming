@@ -53,7 +53,7 @@ char	*_strncpy(char *dest, char *src, int n)
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int i, j, len = 0, pos = 0;
+	int i, len = 0, pos = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -69,7 +69,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		_strncpy(str + pos, av[i], _strlen(av[i]));
-		pos += strlen(av[i]);
+		pos += _strlen(av[i]);
 		str[pos++] = '\n';
 	}
 	str[pos] = '\0';
