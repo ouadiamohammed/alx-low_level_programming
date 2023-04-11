@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * _strlen - calculate the lenght of a string.
@@ -16,6 +17,30 @@ int	_strlen(char *str)
 }
 
 /**
+ * _strncpy - copies a string.
+ *
+ * @dest: destination string.
+ * @src: source string.
+ * @n: number of characters should be copied.
+ *
+ * Return: destination string.
+ */
+
+char	*_strncpy(char *dest, char *src, int n)
+{
+	int i = 0;
+
+	while (src[i] != '\0' && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	for (; n > i; i++)
+		dest[i] = '\0';
+	return (dest);
+}
+
+/**
  * argstostr - concatenates all the arguments of the program.
  *
  * @ac: counter of arguments.
@@ -28,29 +53,25 @@ int	_strlen(char *str)
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int i, j, k;
-	int len = 0;
+	int i, j, len = 0, pos = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
-		len += _strlen(av[i]);
-	len += (ac + 1);
+		len += _strlen(av[i] + 1);
 
 	str = malloc(sizeof(char) * len);
 
 	if (str == NULL)
-	{
-		free(str);
 		return (NULL);
-	}
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; j < _strlen(av[i]); j++)
-			str[k++] = av[i][j];
-		str[k++] = '\n';
+		_strncpy(str + pos, av[i], strlen(av[i]));
+		pos += strlen(av[i]);
+		str[pos++] = '\n';
 	}
+	str[pos] = '\0';
 	return (str);
 }
