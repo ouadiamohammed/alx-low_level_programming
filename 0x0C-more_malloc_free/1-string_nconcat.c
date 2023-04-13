@@ -12,10 +12,21 @@
 int	_strlen(char *str)
 {
 	int i = 0;
+
 	while (str[i] != '\0')
 		i++;
 	return (i);
 }
+
+/**
+ * string_nconcat - allocates memory for an array.
+ *
+ * @s1: pointer to first string.
+ * @s2: pointer to second string.
+ * @n: number of characters to concat from second string.
+ *
+ * Return: pointer to concatenated string.
+ */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
