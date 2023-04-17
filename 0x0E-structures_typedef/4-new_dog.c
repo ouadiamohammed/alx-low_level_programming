@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "doh.h"
+#include "dog.h"
 
 /**
  * _strcpy - makes a copy from source string and save it in destination string.
@@ -69,7 +69,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	dog->owne = malloc(sizeof(char) * (_strlen(owner) + 1));
+	dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 	if (dog->owner == NULL)
 	{
 		free(dog->name);
