@@ -21,7 +21,8 @@ int (*get_op_func(char *s))(int, int)
 			{NULL, NULL}
 	};
 	int i = 0;
-	while (ops[i].op != NULL)
+
+	while (i < 5)
 	{
 		if (s[0] == ops[i].op[0] && s && !s[1])
 			return (ops[i].f);
