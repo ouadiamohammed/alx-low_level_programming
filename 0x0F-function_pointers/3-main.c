@@ -1,7 +1,7 @@
 #include "3-calc.h"
 #include <stdio.h>
 
-/*+
+/**
  * main - calcuator.
  * @argc: arguments counter.
  * @argv: arryay of arguments
