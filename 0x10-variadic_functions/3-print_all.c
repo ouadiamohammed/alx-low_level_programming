@@ -90,7 +90,7 @@ void print_all(const char * const format, ...)
 		i = 0;
 		while (choise[i].letter != '\0')
 		{
-			while (choise[i].letter == format[j])
+			if (choise[i].letter == format[j])
 			{
 				printf("%s", separator);
 				choise[i].func(args);
