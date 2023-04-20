@@ -11,7 +11,7 @@ int _putchar(char c);
 /**
  * struct dt - struct.
  * @letter: data type.
- * @funct: function pointer.
+ * @func: function pointer.
  */
 
 typedef struct dt
