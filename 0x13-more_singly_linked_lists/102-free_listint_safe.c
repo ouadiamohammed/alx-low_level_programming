@@ -9,9 +9,8 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t counter = 0;
-	listint_t *temp;
+	listint_t *temp = *h;
 
-	temp = *h;
 	if (h == NULL)
 		exit(98);
 	while (*h)
