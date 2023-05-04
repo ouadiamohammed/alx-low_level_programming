@@ -15,13 +15,16 @@ void print_binary(unsigned long int n)
 	i = 63;
 	while (i >= 0)
 	{
-		num = (n >> i) & 1;
-		if (num == 1)
-			j = 1;
-		if (j == 1)
-			_putchar(((n >> 1) & 1) + 48);
+		num = n >> i;
+		if (num & 1)
+		{
+			_putchar('1');
+			j++;
+		}
+		else if (j)
+			_putchar('0');
 		i--;
 	}
-	if (n == 0)
+	if (j == 0)
 		_putchar('0');
 }
