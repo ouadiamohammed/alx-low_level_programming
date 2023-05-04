@@ -19,9 +19,9 @@ void print_binary(unsigned long int n)
 		if (num == 1)
 			j = 1;
 		if (j == 1)
-			_putchar(((num >> 1) & 1) + 48);
+			_putchar(((n >> 1) & 1) + 48);
 		i--;
 	}
-	if (num == 0)
+	if (n == 0)
 		_putchar('0');
 }
