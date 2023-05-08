@@ -2,10 +2,12 @@
 
 
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output.
+ * read_textfile - reads a text file and prints it to the POSIX
+ *                 standard output.
  * @filename: Filename.
  * @letters: number.
- * Return: number of letters if succes or 0 if it fails or doesn not write the expected
+ * Return: number of letters if succes or 0 if it fails or doesn
+ *         not write the expected
  *         amount of bytes.
  */
 
