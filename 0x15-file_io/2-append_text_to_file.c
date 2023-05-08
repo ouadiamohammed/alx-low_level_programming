@@ -15,16 +15,16 @@ int append_text_to_file(const char *filename, char *text_content)
 	len = 0;
 	if (filename == NULL)
 		return (-1);
+	file_op = open(filename, O_WRONLY | O_APPEND);
 	if (text_content != NULL)
 	{
-		while (text_content[len])
+		while (text_content[len] != '\0')
 			len++;
 	}
-	file_op = open(filename, O_WRONLY | O_APPEND);
 	file_write = write(file_op, text_content, len);
-	if (file_op == -1 || file_write == -1)
+	if (file_op < 0 || file_write < 0)
 		return (-1);
 
-	close(file_op)
+	close(file_op);
 	return (1);
 }
