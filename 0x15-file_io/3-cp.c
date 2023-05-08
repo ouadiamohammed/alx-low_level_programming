@@ -48,10 +48,10 @@ int main(int argc, char *argv[])
 	if (j < 0 || k < 0)
 	{
 		if (j < 0)
-		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", file_read);
+			dprintf(STDERR_FILENO, "Error: can't close fd %d\n", file_read);
 
 		if (k < 0)
-			dprintf(STDERR_FILENO, "Error: can't close fd %d\n", file_write);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_write);
 	}
 	return (0);
 }
