@@ -23,7 +23,7 @@ void hash_table_delete(hash_table_t *ht)
 			free(node1->key);
 			free(node1->key);
 			free(node1->value);
-			node1 = node2
+			node1 = node2;
 		}
 		free(ht->array);
 	}
