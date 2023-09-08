@@ -4,7 +4,7 @@
  * key_index - generates index of key
  * @key: key
  * @size: the size of the array of hash table
- * 
+ *
  * Return: pointer to the created hash table
  */
 
