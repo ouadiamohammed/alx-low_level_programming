@@ -16,14 +16,17 @@ void hash_table_delete(hash_table_t *ht)
 		return;
 	for (i = 0; i < ht->size; i++)
 	{
-		node1 = ht->array[i];
-		while (node1 != NULL)
+		if (ht->array[i] != NULL)
 		{
-			node2 = node1->next;
-			free(node1->key);
-			free(node1->value);
-			free(node1);
-			node1 = node2;
+			node1 = ht->array[i];
+			while (node1 != NULL)
+			{
+				node2 = node1->next;
+				free(node1->key);
+				free(node1->value);
+				free(node1);
+				node1 = node2;
+			}
 		}
 	}
 	free(ht->array);
