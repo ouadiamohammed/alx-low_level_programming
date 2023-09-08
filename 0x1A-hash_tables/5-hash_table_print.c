@@ -13,7 +13,7 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i = 0;
 	unsigned long int it = 0;
 
-	if (!ht)
+	if (ht)
 	{
 		printf("{");
 		for (it = 0; it < ht->size; it++)
