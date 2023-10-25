@@ -4,7 +4,5 @@ CC = gcc
 
 SRC = main.c school.C
 
-OBJ = $(SRC:.c=.o) 
-
 all :
         $(CC) $(SRC) -o $(NAME)
